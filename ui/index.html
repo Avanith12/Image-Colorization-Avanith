@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ColorCraft: Grayscale to Vibrant Transformation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ 
+  <!-- Stylish enhanced SVG wave background -->
+<svg class="background-lines" viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path fill="none" stroke="#ffffff25" stroke-width="1.2" d="M0,64 C360,160 1080,0 1440,128 L1440,320 L0,320 Z"></path>
+    <path fill="none" stroke="#ffffff35" stroke-width="1.2" d="M0,96 C360,192 1080,32 1440,160 L1440,320 L0,320 Z"></path>
+    <path fill="none" stroke="#ffffff45" stroke-width="1.2" d="M0,128 C360,224 1080,64 1440,192 L1440,320 L0,320 Z"></path>
+    <path fill="none" stroke="#ffffff30" stroke-width="1.2" d="M0,160 C360,256 1080,96 1440,224 L1440,320 L0,320 Z"></path>
+    <path fill="none" stroke="#ffffff20" stroke-width="1.2" d="M0,192 C360,288 1080,128 1440,256 L1440,320 L0,320 Z"></path>
+  </svg>
+  
+
+  <!-- Background animation and particles -->
+  <div class="particles">
+    <span style="left:10%; animation-delay: 0s;"></span>
+    <span style="left:30%; animation-delay: 3s;"></span>
+    <span style="left:50%; animation-delay: 6s;"></span>
+    <span style="left:70%; animation-delay: 2s;"></span>
+    <span style="left:90%; animation-delay: 5s;"></span>
+  </div>
+
+  <div class="container">
+    <h1 class="title">
+      <span>C</span><span>o</span><span>l</span><span>o</span><span>r</span><span>C</span><span>r</span><span>a</span><span>f</span><span>t</span>
+    </h1>
+    <div class="subtitle">Grayscale to Vibrant Transformation</div>
+
+    <div class="upload-box">
+      <p>Upload your image for colorization</p>
+      <label class="upload-label" for="fileInput">Choose Image</label>
+      <input type="file" id="fileInput" accept="image/*" />
+    </div>
+
+    <div class="image-display">
+      <div class="image-box">
+        <img src="img.webp" alt="Grayscale vs Color" />
+        <div class="caption">Sample Transformation</div>
+      </div>
+    </div>
+
+    <button class="run-button" onclick="runModel()">Run Model</button>
+
+    <div class="toast" id="toast">Image Uploaded Successfully!</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
