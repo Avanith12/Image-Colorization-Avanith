@@ -1,0 +1,989 @@
+/* ==== Reset and Base ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0e0e1a;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ==== Background Animation ==== */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(270deg, #f6b4e9, #06688c, #7afcff, #ab0c79);
+  background-size: 800% 800%;
+  animation: animateWave 12s ease infinite;
+  z-index: -1;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+@keyframes animateWave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ==== Container and Titles ==== */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.title span {
+  display: inline-block;
+  color: #63dff5;
+  font-size: 3.5rem;
+  text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+  animation: wave 2s infinite ease-in-out;
+}
+
+.title span:nth-child(2) { animation-delay: 0.1s; }
+.title span:nth-child(3) { animation-delay: 0.2s; }
+.title span:nth-child(4) { animation-delay: 0.3s; }
+.title span:nth-child(5) { animation-delay: 0.4s; }
+.title span:nth-child(6) { animation-delay: 0.5s; }
+.title span:nth-child(7) { animation-delay: 0.6s; }
+.title span:nth-child(8) { animation-delay: 0.7s; }
+.title span:nth-child(9) { animation-delay: 0.8s; }
+.title span:nth-child(10){ animation-delay: 0.9s; }
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  color: #ddd;
+  animation: fadeInUp 1.5s ease;
+}
+.names {
+  margin-bottom: 40px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+/* 🔥 ADD your new block here 🔥 */
+
+.main-heading {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sub-heading {
+  font-size: 20px;
+  text-align: center;
+  color: #eee;
+  margin-top: 10px;
+}
+
+.team-names {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.hero-description {
+  line-height: 1.6;
+  font-size: 16px;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.example-image img {
+  max-width: 90%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+}
+
+/* ==== Upload Box ==== */
+.upload-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed #7afcff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 350px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  transition: 0.4s ease;
+}
+
+.upload-box:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-color: #63e6f5;
+  box-shadow: 0 0 25px rgba(255,255,255,0.25);
+}
+
+.upload-box input[type="file"],
+.dataset-dropdown {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #7afcff;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  appearance: none;
+  outline: none;
+}
+
+.upload-label {
+  display: inline-block;
+  background-color: #63e4f5;
+  color: #000;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.upload-label:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* ==== Image Display ==== */
+.image-display {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.image-box {
+  position: relative;
+  width: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  border: 2px solid #7afcff;
+  transition: transform 0.4s ease;
+}
+
+.image-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #63ebf5;
+}
+
+/* ==== Buttons ==== */
+.run-button, .demo-button {
+  background-color: #63f0f5;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.run-button:hover, .demo-button:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* ==== Sections (Intro, About, Demo, etc.) ==== */
+.intro-section, .about-section, .demo-section, .future-section, .references-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.intro-section .main-title {
+  font-size: 2.8rem;
+  color: #63f5ee;
+  margin-bottom: 15px;
+}
+
+.subtitle-intro {
+  font-size: 1.5rem;
+  color: #ffffffcc;
+  margin-bottom: 20px;
+}
+
+.group-name {
+  font-size: 1.2rem;
+  color: #7afcff;
+  margin-bottom: 20px;
+}
+
+.short-description {
+  font-size: 1rem;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.hero-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.hero-img {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* ==== Footer ==== */
+.footer {
+  background: #111;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  margin-bottom: 12px;
+}
+
+.team-member p {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.footer-contact {
+  color: #7afcff;
+  margin-top: 20px;
+}
+
+.footer-contact a {
+  color: #63daf5;
+  text-decoration: underline;
+}
+
+/* ==== Animations ==== */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.background-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -3;
+  opacity: 1;
+  animation: scrollWaves 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes scrollWaves {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(0px); }
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.particles span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255,255,255,0.3);
+  animation: floatParticle 15s linear infinite;
+  border-radius: 50%;
+}
+
+@keyframes floatParticle {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(-120vh) scale(0.2);
+    opacity: 0;
+  }
+}
+
+/* ==== Toast Notification ==== */
+.toast {
+  position: fixed;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #63d5f5;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
+  opacity: 0;
+  font-weight: 600;
+}
+/* Fade In Page on Load */
+body {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+/* Button hover and click animations */
+.run-button, .demo-button {
+  transition: all 0.3s ease;
+}
+
+.run-button:hover, .demo-button:hover {
+  transform: translateY(-3px);
+  background-color: #ff9800;
+  color: white;
+  box-shadow: 0 8px 16px rgba(255, 152, 0, 0.3);
+}
+
+.run-button:active, .demo-button:active {
+  transform: scale(0.95);
+}
+
+/* Image Box Hover Effect */
+.image-box {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover {
+  transform: scale(1.03);
+}
+
+
+/* ==== Floating Tips Animation ==== */
+.floating-tips {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.tip {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  animation: floatUpTips 25s linear infinite;
+  white-space: nowrap;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes floatUpTips {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+#upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.upload-section .upload-box {
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px dashed #7afcff;
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+  backdrop-filter: blur(10px);
+  margin-top: 40px;
+}
+
+.upload-section .upload-box h2 {
+  margin-bottom: 20px;
+  color: #63e6f5;
+}
+
+#outputImageContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.transparent-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  padding: 30px;
+}
+
+#outputImageContainer img {
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+/* ==== Floating Funny Tips ==== */
+.floating-tips {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.tip {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  animation: floatUpTips 25s linear infinite;
+  white-space: nowrap;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes floatUpTips {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* ==== Title Hover Bounce ==== */
+.title.moving {
+  font-size: 3.5rem;
+  color: #63eef5;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.5s ease;
+}
+.title.moving:hover {
+  transform: scale(1.1) rotate(-3deg);
+  color: #7afcff;
+}
+
+/* ==== Names Inline and Glow ==== */
+.names p {
+  font-size: 1.2rem;
+  color: #00eaff;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.names p:hover {
+  color: #63ebf5;
+  transform: scale(1.05) rotate(1deg);
+  text-shadow: 0 0 10px rgba(245, 230, 99, 0.8);
+}
+.bubble-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Behind content */
+}
+
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: rise 15s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  left: 40%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(3) {
+  left: 60%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 5s;
+}
+
+.bubble:nth-child(4) {
+  left: 80%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 7s;
+}
+
+.bubble:nth-child(5) {
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 10s;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-800px) scale(1.5);
+    opacity: 0;
+  }
+}
+.image-example {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.image-example img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.image-example img:hover {
+  transform: scale(1.05);
+}
+
+.floating-label {
+  position: absolute;
+  top: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #63f5eb;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  backdrop-filter: blur(8px);
+  animation: floatLabel 5s infinite ease-in-out;
+}
+
+/* Floating animation */
+@keyframes floatLabel {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.title.moving {
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #d1ff65, #8af4fc, #4ef678);
+  background-size: 800% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  letter-spacing: 1.2px;
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  animation:
+    shimmer 10s ease infinite,
+    fadeSlideIn 1.5s ease forwards,
+    floatUpDown 6s ease-in-out infinite;
+}
+
+/* Animated Underline */
+.title.moving::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  margin: 10px auto 0;
+  background: #ff6ec4;
+  transition: width 1s ease;
+  animation: underlineGrow 1.5s ease forwards;
+}
+
+/* Gradient shimmer */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Fade + slide-in */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Float gently up and down */
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Underline animation */
+@keyframes underlineGrow {
+  to {
+    width: 60%;
+  }
+}
+
+/* Floating particles behind ColorCraft */
+.colorcraft-particles {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.colorcraft-particles span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ffffff55;
+  border-radius: 50%;
+  animation: floatParticle 10s infinite ease-in-out;
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-100px) scale(0.5); opacity: 0; }
+}
+
+/* Nice little hover effect on names if you want */
+.names p {
+  display: inline-block;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.names p:hover {
+  color: #ff9a8b;
+  transform: scale(1.05);
+}
+.balloon-container {
+  position: relative;
+  height: 100px;
+  margin-top: -40px;
+}
+
+.balloon {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background: radial-gradient(circle, #ff7eb3, #ff758c);
+  border-radius: 50% 50% 50% 50%;
+  animation: floatUp 5s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+.balloon:nth-child(1) {
+  left: 40%;
+  animation-delay: 0s;
+}
+
+.balloon:nth-child(2) {
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+  left: 60%;
+  animation-delay: 2s;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-40px) scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.neon-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 2px dashed #63bdf5;
+  box-shadow: 0 0 25px rgba(150, 105, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.neon-box:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 35px rgba(118, 105, 255, 0.5);
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #7afcff;
+  margin: 0 8px;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f563c4;
+  transform: scale(1.2);
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  background: #0d0d0d;
+  padding: 80px 20px 60px 20px;
+}
+
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, #65d6ff30 0%, transparent 40%),
+              radial-gradient(circle at 70% 70%, #ff9a8b30 0%, transparent 40%);
+  background-size: 400% 400%;
+  animation: animateFooter 20s linear infinite;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+@keyframes animateFooter {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Make sure content stays above the background */
+.footer-container, .team-members, .footer-heading {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Colorization</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #283048, #859398);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .upload-box {
+            margin-top: 50px;
+            padding: 20px;
+            border: 2px dashed #00ffff;
+            border-radius: 15px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .upload-box input[type="file"] {
+            margin: 10px 0;
+        }
+        .button {
+            background-color: orange;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        img {
+            margin-top: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Upload a Grayscale Image to Colorize</h1>
+
+    <div class="upload-box">
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="file" name="file" accept=".png,.jpg,.jpeg" required><br>
+            <button type="submit" class="button">Colorize Uploaded Image</button>
+        </form>
+    </div>
+
+    <div id="output-image"></div>
+
+    <script>
+        const form = document.getElementById('upload-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const fileInput = document.getElementById('file');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please choose a file first!');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            const response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                document.getElementById('output-image').innerHTML = `
+                    <h2>Colorized Output:</h2>
+                    <img src="${result.output_path}" alt="Colorized Image">
+                `;
+            } else {
+                alert(result.error || 'Error uploading file!');
+            }
+        });
+    </script>
+
+</body>
+</html>
