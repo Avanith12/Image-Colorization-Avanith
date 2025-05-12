@@ -13,7 +13,6 @@ Our project transforms black-and-white images into vibrant, colorized versions u
 </p>
 
 
-
 ## <h2 align="center"><span> 🟦 Problem & Solution</span>
 
 ### Problem
@@ -92,7 +91,7 @@ We train a deep learning model to **learn color patterns from real-world images*
 </td>
 <td align="center">
   <a href="https://www.linkedin.com/in/lakshmi-pranathi-vutla30/">
-    <img src="static/Pranathi.jpg" width="100" height="100" style="border-radius: 50%;"/><br>
+    <img src="teamimages/Pranathi.jpg" width="100" height="100" style="border-radius: 50%;"/><br>
     <strong>Lakshmi Pranathi Vutla</strong>
   </a>
 </td>
