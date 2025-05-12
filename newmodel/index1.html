@@ -1,0 +1,139 @@
+# <h1 align="center"><span style="color:#F05A28"> 🎨 Enhancing Image Colorization Using Conditional GANs</span>
+
+<p align="center"><em>Bring grayscale images to life with deep learning!</em></p>
+
+---
+
+## <h2 align="center"><span style="color:#005A8B"> 🔍 What’s This Project About?</span>
+
+This project transforms black-and-white images into vibrant, colorized versions using a **Conditional Generative Adversarial Network (cGAN)**.  
+We combine a **ResNet18 encoder**, **Dynamic UNet decoder**, and **PatchGAN discriminator** to learn realistic mappings from grayscale to color.
+
+Our work automates a process that once required manual skill — making it instant, scalable, and accessible.
+
+---
+
+## <h2 align="center"><span style="color:#005A8B"> 🧠 Model Architecture</span>
+
+- **Encoder:** ResNet18 (pretrained)
+- **Decoder:** Dynamic UNet
+- **Discriminator:** 70x70 PatchGAN
+- **Loss:** L1 Loss + GAN Loss
+- **Image Size:** 256x256
+
+<p align="center">
+  <img src="static/bsndc.png" width="600" />
+  <br><em>Example Output: Grayscale ➔ Color</em>
+</p>
+
+---
+
+## <h2 align="center"><span style="color:#005A8B"> 📂 Try It Yourself</span>
+
+1. Upload a grayscale photo  
+2. Click **Colorize**  
+3. See the magic!
+
+> ✅ Fast and automatic  
+> ✅ Works on most photo types  
+> ✅ No editing skill needed
+
+---
+
+## <h2 align="center"><span style="color:#005A8B"> 💡 Problem & Solution</span>
+
+### 🖤 Problem
+Grayscale images are emotionally powerful, but lack visual richness. Manual recoloring is slow, costly, and inconsistent.
+
+### 🎨 Solution
+We train a deep learning model to **learn color patterns from real-world images** and apply them to black-and-white inputs — offering fast, accurate, and beautiful colorization.
+
+---
+
+## <h2 align="center"><span style="color:#005A8B"> 🌍 Real-World Applications</span>
+
+- 🧓 Revive old family photos  
+- 📰 Recolor historic archives  
+- 🎨 Help artists and content creators  
+- 🎬 Restore vintage films  
+- 📚 Create colorful educational materials
+
+---
+
+## <h2 align="center"><span style="color:#005A8B"> 🧪 Training Information</span>
+
+| **Setting**        | **Details**                        |
+|--------------------|------------------------------------|
+| Dataset            | Subset of ImageNet (~10k images)   |
+| Libraries          | PyTorch, FastAI, OpenCV, NumPy     |
+| Training Time      | ~10 hours                          |
+| Optimizer          | Adam (β₁ = 0.5, β₂ = 0.999)         |
+| Evaluation Metrics | MSE, SSIM, Visual Comparison       |
+
+---
+
+## <h2 align="center"><span style="color:#005A8B"> 🔬 Future Improvements</span>
+
+- Real-time demo  
+- Mobile + web support  
+- Adjustable color warmth/vibrancy  
+- Add Vision Transformers + Diffusion models  
+- Tune for specific photo types (portraits, landscapes)
+
+---
+
+## <h2 align="center"><span style="color:#005A8B"> 📚 References</span>
+
+- *Colorful Image Colorization* – Zhang et al.  
+- *Image-to-Image Translation with cGANs* – Isola et al.  
+- *Self-Supervised Image Colorization* – Larsson et al.  
+- *Deep Colorization with Context* – Iizuka et al.  
+- *Vision Transformer + UNet*  
+- *Multi-Attention U-Net*  
+- *User-Guided Adaptive Colorization*
+
+---
+
+## <h2 align="center"><span style="color:#005A8B"> 👨‍💻 Meet the Team</span>
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/raminguyen/">
+        <img src="static/Rami.jpg" width="100" height="100" style="border-radius: 50%;"/><br>
+        <strong>Rami Huu Nguyen</strong>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/lakshmi-pranathi-vutla30/">
+        <img src="static/Pranathi.jpg" width="100" height="100" style="border-radius: 50%;"/><br>
+        <strong>Lakshmi Pranathi Vutla</strong>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/avanith-kanamarlapudi-8aa081204/">
+        <img src="static/avanith.jpg" width="100" height="100" style="border-radius: 50%;"/><br>
+        <strong>Avanith Kanamarlapudi</strong>
+      </a>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+---
+
+## <h2 align="center"><span style="color:#005A8B"> 🙌 Acknowledgements</span>
+
+Thanks to our professors and mentors at **UMass Boston** who guided this journey.  
+This project was built as part of our work in the **AI for All** program.
+
+---
+
+<p align="center">
+
+  🔗 #AIforAll #UMassBoston #ImageColorization #DeepLearning #CGAN #Rami #Avanith #Pranathi
+
+</p>
